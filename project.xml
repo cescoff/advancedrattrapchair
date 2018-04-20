@@ -15,8 +15,8 @@
     <presentation>&lt;p&gt;The folding chair prototype.&lt;/p&gt;&lt;p&gt;This project proves the concept of the wood based hinge. The hinge is calculated dynamically depending on the desired parameters.&lt;/p&gt;&lt;p&gt;The hinge and sliders are distributed through 3 different layers. The one in the middle embeds the axles holes.&lt;/p&gt;&lt;p&gt;The mounting instructions are provided within the zip archive that can be downloaded&lt;/p&gt;&lt;p&gt;Sources are available here: &lt;a href=&quot;https://github.com/cescoff/advancedrattrapchair&quot;&gt;&lt;u&gt;https://github.com/cescoff/advancedrattrapchair&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Enjoy it, it is free&lt;/p&gt;</presentation>
     <default>
         <variable name="fullSeatHeight" display-name="Seat height (distance from the floor)" unit="mm" description="In millimeters">410</variable>
-        <variable name="fullSeatLength" display-name="Seat length" unit="mm" description="In millimeters">300</variable>
-        <variable name="fullSeatwidth" display-name="Seat width" unit="mm" description="In millimeters">310</variable>
+        <variable name="fullPivotDistance" display-name="Seat length" unit="mm" description="In millimeters">160</variable>
+        <variable name="fullSeatwidth" display-name="Seat width" unit="mm" description="In millimeters">320</variable>
         <variable name="fullUpright" display-name="Chair upright (visible on the front of the chair)" unit="mm" description="In millimeters">50</variable>
         <variable name="alphaDeg" display-name="Back vertical axis angle" unit="degrees" description="In degrees">17</variable>
 	<variable name="fullSeatHingeWidth" display-name="Hinge crenel tooth width (minimum value)" unit="mm" description="In millimeters">55</variable>
