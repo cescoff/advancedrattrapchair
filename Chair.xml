@@ -16,7 +16,7 @@
 			direction="backward" 
 			action="CUT" 
 			axle-distance1="${rearleglength}"
-			axle-distance2="${seatlength}+${seataxledistance}+${holeradius}"
+			axle-distance2="${pivotdistance}+${seataxledistance}+${holeradius}"
 			axle-layer="MiddleFace"
 			thickness="${chairthickness}"
 			head-span="${seatcrenelhingedistance}"

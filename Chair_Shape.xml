@@ -8,11 +8,11 @@
 	<!-- Reference Point -->
 	<point x="${borderdistance}" y="${borderdistance}" name="GlobalTopLeftPoint" layer="Main" />
 
-	<point x="${fullSeatLength}" y="${fullFulLength}" name="F" layer="Main" />
+	<point x="${fullPivotDistance}" y="${fullFulLength}" name="F" layer="Main" />
 	<point x="F//Center//${fullFeetSpan}" y="F//Center//0" name="R" layer="Main" />
 	<point x="F//Center//+${fullFulLength}*Math.sin(${alpha})" y="F//Center//-(${fullFulLength}*Math.cos(${alpha}))" name="T" layer="Main" />
-	<point x="F//Center//+${fullFrontLegLength}*Math.sin(${alpha})-(${fullSeatLength}*Math.sin(${beta})*Math.tan(${alpha}))" y="F//Center//-(${fullFrontLegLength}*Math.cos(${alpha}))+(${fullSeatLength}*Math.sin(${beta}))/Math.cos(${alpha})" name="S" layer="Main" />
-	<point x="F//Center//+${fullFrontLegLength}*Math.sin(${alpha})-${fullSeatLength}" y="F//Center//-(${fullFrontLegLength}*Math.cos(${alpha}))" name="P" layer="Main" />
+	<point x="F//Center//+${fullFrontLegLength}*Math.sin(${alpha})-(${fullPivotDistance}*Math.sin(${beta})*Math.tan(${alpha}))" y="F//Center//-(${fullFrontLegLength}*Math.cos(${alpha}))+(${fullPivotDistance}*Math.sin(${beta}))/Math.cos(${alpha})" name="S" layer="Main" />
+	<point x="F//Center//+${fullFrontLegLength}*Math.sin(${alpha})-${fullPivotDistance}" y="F//Center//-(${fullFrontLegLength}*Math.cos(${alpha}))" name="P" layer="Main" />
 	
 	<path name="FT" layer="Main" action="VIEW">
 		<point x="F//Center//0" y="F//Center//0" />

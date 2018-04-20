@@ -37,22 +37,22 @@
 	<expression name="beta" print="true" expression="(${betaDeg}*Math.PI)/180"/>
 	<expression name="filetRadius" print="true" expression="${fullFiletRadius}/${ratio}"/>
 	<!-- s -->
-	<expression name="fullhorizontalSeatLength" print="true" expression="${fullPivotDistance} * Math.cos(${beta})" />
-	<expression name="horizontalseatlength" expression="${fullhorizontalSeatLength}/${ratio}" />
+	<expression name="fullhorizontalPivotDistance" print="true" expression="${fullPivotDistance} * Math.cos(${beta})" />
+	<expression name="horizontalpivotdistance" expression="${fullhorizontalPivotDistance}/${ratio}" />
 	
 	<expression name="fullFrontLegLength" print="true" expression="${fullSeatHeight}/Math.cos(${alpha})"/>
 	<expression name="frontleglength" expression="(${fullFrontLegLength})/${ratio}"/>
 	<!-- FR-->
-	<expression name="fullFeetSpan" print="true" expression="(${fullhorizontalSeatLength}*${delta})/(1-${delta})"/>
+	<expression name="fullFeetSpan" print="true" expression="(${fullhorizontalPivotDistance}*${delta})/(1-${delta})"/>
 	<expression name="feetspan" expression="${fullFeetSpan}/${ratio}"/>
 	
 	<!-- PR -->
-	<expression name="fullRearLegLength" print="true" expression="Math.sqrt(Math.pow(${fullSeatHeight},2)+Math.pow((${fullhorizontalSeatLength}-${fullSeatHeight}*Math.tan(${alpha})+${fullFeetSpan}),2))"/>
+	<expression name="fullRearLegLength" print="true" expression="Math.sqrt(Math.pow(${fullSeatHeight},2)+Math.pow((${fullhorizontalPivotDistance}-${fullSeatHeight}*Math.tan(${alpha})+${fullFeetSpan}),2))"/>
 	<expression name="rearleglength" expression="${fullRearLegLength}/${ratio}"/>
 	
 	<!-- FT -->
-	<expression name="fullFulLength" print="false" expression="(${fullRearLegLength}+${fullhorizontalSeatLength})" />
-	<expression name="fullChairLength" print="true" expression="(${fullRearLegLength}+${fullhorizontalSeatLength})+2*${fullUpright}" />
+	<expression name="fullFulLength" print="false" expression="(${fullRearLegLength}+${fullhorizontalPivotDistance})" />
+	<expression name="fullChairLength" print="true" expression="(${fullRearLegLength}+${fullhorizontalPivotDistance})+2*${fullUpright}" />
 	<expression name="fullength" expression="${fullFulLength}/${ratio}" />
 	
 	<!-- Front Leg Slider -->
@@ -86,7 +86,7 @@
     	<expression name="seathingeoffSet" expression="Math.max(${fullSeatHingeOffSet}/${ratio}, 3.0)"/>
     	<expression name="seatcrenelhingedistance" expression="Math.max(${chairthickness}/5 + ${fullHingeHoleRadius}, 4.0)"/>
     
-    	<expression name="seatlength" expression="Math.max(${fullPivotDistance}/${ratio}, 3.0)"/>
+    	<expression name="pivotdistance" expression="Math.max(${fullPivotDistance}/${ratio}, 3.0)"/>
 
     	<expression name="seataxledistance" expression="Math.max(${fullSeatAxleDistance}/${ratio}, 5.0)"/>
     	<expression name="topcarrywidth" expression="${fullTopCarryWidth}/${ratio}"/>
@@ -100,7 +100,7 @@
     	<expression name="fullLegAxleWidth" expression="${seatwidth} + 2*${upright}"/>
 	
 	
-    	<validation name="Chair will not be stable, it will fall" expression="${fullFeetSpan} - ((${fullRearLegLength} + ${fullhorizontalSeatLength})*Math.sin(${alpha}))" validation=">0" />
+    	<validation name="Chair will not be stable, it will fall" expression="${fullFeetSpan} - ((${fullRearLegLength} + ${fullhorizontalPivotDistance})*Math.sin(${alpha}))" validation=">0" />
     	<validation name="Split length must be at least 700mm" expression="${fullCutLength} - 700" validation=">0" />
     	<validation name="Aspect ratio value must be 1 or 2" expression="(${ratio} - 1)*(${ratio} - 1.6)*(${ratio} - 2)" validation="==0" />
 </variables>
